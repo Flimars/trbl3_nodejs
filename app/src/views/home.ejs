@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <h1>Bem-vindo, <%= user.name %>!</h1>
+  <p>Seu papel: <strong><%= user.role %></strong></p>
+
+  <h2>Módulos disponíveis:</h2>
+  <ul>
+    <% modules.forEach(module => { %>
+      <li><a href="<%= module.link %>"><%= module.name %></a></li>
+    <% }) %>
+  </ul>
+
+  <a href="/auth/logout">Sair</a>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <%- include('includes/head') %>
+
+<body>
+  
+  <h1>Bem-vindo, Sistema de Controle de Acesso<%= user.username %>!</h1>
+  <p>Papel: <%= user.role %></p>
+  <a href="/users">Gerenciar Usuários</a>
+  <form action="/logout" method="POST" enctype="multipart/form-data">
+    <button type="submit">Sair</button>
+  </form>
+</body>
+</html> -->
+
+<!-- 
+<body>
+    <%- include('includes/nav') %>
+
+    <h1>Tela Inicial</h1>
+    <% if (user) { %>
+        <p>Olá, <%= user.email %></p>
+
+        <form action="publicar-foto" method="post" enctype="multipart/form-data">
+            <input type="file" name="foto" id="fotoId">
+            <button type="submit">Publicar</button>
+        </form>
+
+        <a href="/logout">Sair</a>
+    <% } else { %>
+        <a href="/login">Login</a>
+        <a href="/register">Registrar</a>
+    <% } %>
+</body>
+</html> -->
+

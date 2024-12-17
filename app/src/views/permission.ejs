@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Permissões</title>
+</head>
+<body>
+  <h1>Gerenciamento de Permissões</h1>
+  <a href="/">Voltar para a página inicial</a>
+  <form action="/permission/add" method="POST">
+    <label for="userId">Usuário:</label>
+    <select name="userId" id="userId">
+      <% users.forEach(user => { %>
+        <option value="<%= user.id %>"><%= user.name %></option>
+      <% }) %>
+    </select>
+    <label for="moduleId">Módulo:</label>
+    <select name="moduleId" id="moduleId">
+      <% modules.forEach(module => { %>
+        <option value="<%= module.id %>"><%= module.name %></option>
+      <% }) %>
+    </select>
+    <button type="submit">Adicionar Permissão</button>
+  </form>
+</body>
+</html>

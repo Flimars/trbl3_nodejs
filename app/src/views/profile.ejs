@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+</head>
+<body>
+  <h1>Meu Perfil</h1>
+  <p>Nome: <%= user.name %></p>
+  <p>Email: <%= user.email %></p>
+  <form action="/profile/update" method="POST" enctype="multipart/form-data">
+    <label for="profileImage">Atualizar imagem:</label>
+    <input type="file" name="profileImage" id="profileImage">
+    <button type="submit">Atualizar</button>
+  </form>
+</body>
+</html>
